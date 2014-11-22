@@ -9,5 +9,6 @@ Author URI: www.doofmars.de
 */
 
 require_once( WP_PLUGIN_DIR . '/pp_tables/includes/pp_tables_admin.php' );
+require_once( WP_PLUGIN_DIR . '/pp_tables/includes/pp_tables_update_functions.php' );
 
 ?>

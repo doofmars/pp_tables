@@ -13,7 +13,25 @@ function pp_tables_menu() {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
 	echo '<div class="wrap">';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '<h2>PP Tables</h2>';
+	echo '<p>Plugin to gather up the information for each post, which take a lot of time, and cache them into a consolidation table.</p>';
+	
+	if ($_POST['action'] == 'update_data') {
+		pp_tables_update_data();
+		echo '<p>Data Updated</p>';
+	}
+	if ($_POST['action'] == 'check_table') {
+		pp_tables_check_table();
+		echo '<p>Table Updated</p>';
+	}
+	echo '<p><form method="post" action="">
+			 <input type="hidden" name="action" value="update_data" />
+			<input type="submit" class="button-primary" value="Update consolidation table" />
+		  </form></p>';
+	echo '<p><form method="post" action="">
+			 <input type="hidden" name="action" value="check_table" />
+			<input type="submit" class="button-primary" value="Check table" />
+		  </form></p>';
 	echo '</div>';
 }
 ?>
