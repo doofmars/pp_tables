@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: PP Profiles
+Plugin Name: PP Tables
 Plugin URI: www.doofmars.de
-Description: Modifies the Profile Page
+Description: Simple plug-in to gather up the information for each post, which take a lot of time, and cache them into a consolidation table.
 Author: Doofmars
 Version: 0.1
 Author URI: www.doofmars.de
