@@ -1,5 +1,14 @@
 <?php
 
+function formatPPDate($dateStr){
+	if (!empty($dateStr) ){
+		$date = DateTime::createFromFormat('d/m/Y', $dateStr);
+		return $date->format('Y-m-d');	
+	} else {
+	return $dateStr;
+	}
+}
+
 function getPPRatingCount($postID){
 	global $wpdb;
 	$wpdb->get_results($wpdb->prepare("SELECT * FROM wp_YJYgB8jJ_pp_ratings WHERE post_id = %d", $postID));
@@ -160,18 +169,19 @@ function pp_tables_update_data() {
     $query = 'cat='.$catID.'&showposts=1000&nopaging=true';
 	
 	$welcome_text = "none";
+	$count = 1;
 	
 	query_posts($query);
 	while (have_posts()) : the_post(); 
-		echo "<p>";
+		//echo "<p>";
 				
 		$test = array( 
 				'PostID' => get_the_ID(), 
 				'Name' => get_the_title(), 
 				'URL' =>  get_relative_permalink(get_permalink()), 
 				'Posted' => get_the_date("Y-m-d"), 
-				'Released' => get_post_meta(get_the_ID(), "ReleaseDate", true), 
-				'Downloads' => ppd_totalDownloadsTable(), 
+				'Released' => formatPPDate(get_post_meta(get_the_ID(), "ReleaseDate", true)), 
+                'Downloads' => ppd_totalDownloadsTable(), 
 				'Recs' => getPPRatingCount(get_the_ID()), 
 				'AvRec' => getPPAverageRating(get_the_ID()), 
 				'PhillipSays' => getPPPhilipsRating(get_the_ID()), 
@@ -182,9 +192,14 @@ function pp_tables_update_data() {
 				'Type' => getPPType(), 
 				'Tags' => getPPTags(), 
 			); 
-		//$wpdb->insert($table_name, $test);
-		print_r($test);
-		echo "</p>";
+		$wpdb->update($table_name, $test, array('PostID' => get_the_ID()));
+		
+		echo ".";
+		if ($count % 250 == 0){
+			echo "<br>\n";
+		}
+		$count++;
+		//echo "</p>";
 	endwhile;
     
 }
