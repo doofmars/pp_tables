@@ -15,6 +15,8 @@ function pp_tables_menu() {
 	echo '<div class="wrap">';
 	echo '<h2>PP Tables</h2>';
 	echo '<p>Plugin to gather up the information for each post, which take a lot of time, and cache them into a consolidation table.</p>';
+	$updateTime = get_option("pp_table_update_date", "Not yet" );
+	echo "<p><b>Last updated: $updateTime</b></p>";
 	
 	if ($_POST['action'] == 'update_data') {
 		$posts = pp_tables_update_data();
@@ -38,7 +40,7 @@ function pp_tables_menu() {
 		  </form></p>';
 	echo '<p><form method="post" action="">
 			 <input type="hidden" name="action" value="check_table" />
-			<input type="submit" class="button-primary" value="Check table" />
+			<input type="submit" class="button-primary" value="Rebuild table" />
 		  </form></p>';
 	echo '</div>';
 }

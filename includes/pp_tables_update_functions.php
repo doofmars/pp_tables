@@ -179,7 +179,7 @@ function pp_tables_update_data($debug = false ) {
 				'URL' =>  get_relative_permalink(get_permalink()), 
 				'Posted' => get_the_date("Y-m-d"), 
 				'Released' => formatPPDate(get_post_meta(get_the_ID(), "ReleaseDate", true)), 
-                'Downloads' => 0, 
+                'Downloads' => ppd_totalDownloadsTable(), 
 				'Recs' => getPPRatingCount(get_the_ID()), 
 				'AvRec' => getPPAverageRating(get_the_ID()), 
 				'PhillipSays' => getPPPhilipsRating(get_the_ID()), 
@@ -205,6 +205,7 @@ function pp_tables_update_data($debug = false ) {
 		$count++;
 	endwhile;
     
+	update_option("pp_table_update_date", date("Y-m-d H:i:s"));
 	return $count;
 }
 
