@@ -4,7 +4,7 @@ Plugin Name: PP Tables
 Plugin URI: www.doofmars.de
 Description: Simple plug-in to gather up the information for each post, which take a lot of time, and cache them into a consolidation table.
 Author: Doofmars
-Version: 0.1
+Version: 0.3
 Author URI: www.doofmars.de
 */
 

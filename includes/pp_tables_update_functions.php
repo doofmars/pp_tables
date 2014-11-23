@@ -5,7 +5,7 @@ function formatPPDate($dateStr){
 		$date = DateTime::createFromFormat('d/m/Y', $dateStr);
 		return $date->format('Y-m-d');	
 	} else {
-	return $dateStr;
+	return get_the_date("Y-m-d");
 	}
 }
 
@@ -159,7 +159,7 @@ function pp_tables_check_table(){
 
 
 /** Register main update function */
-function pp_tables_update_data() {
+function pp_tables_update_data($debug = false ) {
     global $wpdb;
 	$table_name = $wpdb->prefix . 'consolidation';
 
@@ -172,16 +172,14 @@ function pp_tables_update_data() {
 	$count = 1;
 	
 	query_posts($query);
-	while (have_posts()) : the_post(); 
-		//echo "<p>";
-				
+	while (have_posts()) : the_post(); 				
 		$test = array( 
 				'PostID' => get_the_ID(), 
 				'Name' => get_the_title(), 
 				'URL' =>  get_relative_permalink(get_permalink()), 
 				'Posted' => get_the_date("Y-m-d"), 
 				'Released' => formatPPDate(get_post_meta(get_the_ID(), "ReleaseDate", true)), 
-                'Downloads' => ppd_totalDownloadsTable(), 
+                'Downloads' => 0, 
 				'Recs' => getPPRatingCount(get_the_ID()), 
 				'AvRec' => getPPAverageRating(get_the_ID()), 
 				'PhillipSays' => getPPPhilipsRating(get_the_ID()), 
@@ -194,14 +192,20 @@ function pp_tables_update_data() {
 			); 
 		$wpdb->replace($table_name, $test);
 		
-		echo ".";
-		if ($count % 250 == 0){
-			echo "<br>\n";
+		if($debug){
+			echo "<p>";
+			print_r($test);
+			echo "</p>";
+		} else {
+			echo ".";
+			if ($count % 250 == 0){
+				echo "<br>\n";
+			}		
 		}
 		$count++;
-		//echo "</p>";
 	endwhile;
     
+	return $count;
 }
 
 ?>

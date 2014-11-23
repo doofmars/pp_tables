@@ -17,8 +17,12 @@ function pp_tables_menu() {
 	echo '<p>Plugin to gather up the information for each post, which take a lot of time, and cache them into a consolidation table.</p>';
 	
 	if ($_POST['action'] == 'update_data') {
-		pp_tables_update_data();
-		echo '<p>Data Updated</p>';
+		$posts = pp_tables_update_data();
+		echo "<p>$posts entry's Updated</p>";
+	}	
+	if ($_POST['action'] == 'update_data_debug') {
+		$posts = pp_tables_update_data(true);
+		echo "<p>$posts entry's Updated</p>";
 	}
 	if ($_POST['action'] == 'check_table') {
 		pp_tables_check_table();
@@ -27,6 +31,10 @@ function pp_tables_menu() {
 	echo '<p><form method="post" action="">
 			 <input type="hidden" name="action" value="update_data" />
 			<input type="submit" class="button-primary" value="Update consolidation table" />
+		  </form></p>';
+	echo '<p><form method="post" action="">
+			 <input type="hidden" name="action" value="update_data_debug" />
+			<input type="submit" class="button-primary" value="Update consolidation table with output" />
 		  </form></p>';
 	echo '<p><form method="post" action="">
 			 <input type="hidden" name="action" value="check_table" />
