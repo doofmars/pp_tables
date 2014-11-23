@@ -34,15 +34,39 @@ function pp_tables_check_table(){
 
 /** Register main update function */
 function pp_tables_update_data() {
-    
+    global $wpdb;
+	$table_name = $wpdb->prefix . 'consolidation';
+
 	//Cat: All Games
     $catID = 81;
 	//Create query
     $query = 'cat='.$catID.'&showposts=1000&nopaging=true';
 	
+	$welcome_text = "none";
+	
 	query_posts($query);
 	while (have_posts()) : the_post(); 
-		
+		echo "<p>";
+		$test = array( 
+				'PostID' => get_the_ID(), 
+				'Name' => get_the_title(), 
+				'URL' =>  get_permalink(), 
+				'Posted' => get_the_time(), 
+				'Released' => get_post_meta(get_the_ID(), "ReleaseDate", true), 
+				'Downloads' => ppd_totalDownloadsTable(), 
+				'Recs' => 0, 
+				'AvRec' => 0, 
+				'PhillipSays' => 0, 
+				'Comments' => get_comments_number(), 
+				'FileSizeT' => get_post_meta(get_the_ID(), "filesize", true), 
+				'Playtime' => "TODO", 
+				'Game' => "TODO", 
+				'Type' => "TODO", 
+				'Tags' => "TODO", 
+			); 
+		//$wpdb->insert($table_name, $test);
+		print_r(get_the_title());
+		echo "</p>";
 	endwhile;
     
 }
