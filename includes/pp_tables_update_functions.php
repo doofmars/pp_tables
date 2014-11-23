@@ -192,7 +192,7 @@ function pp_tables_update_data() {
 				'Type' => getPPType(), 
 				'Tags' => getPPTags(), 
 			); 
-		$wpdb->update($table_name, $test, array('PostID' => get_the_ID()));
+		$wpdb->replace($table_name, $test);
 		
 		echo ".";
 		if ($count % 250 == 0){
