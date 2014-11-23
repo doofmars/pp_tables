@@ -34,10 +34,17 @@ function pp_tables_check_table(){
 
 /** Register main update function */
 function pp_tables_update_data() {
+    
+	//Cat: All Games
+    $catID = 81;
+	//Create query
+    $query = 'cat='.$catID.'&showposts=1000&nopaging=true';
 	
-	for ($i = 0; $i < 10; $i++ ){
-		echo ($i);
-	}
+	query_posts($query);
+	while (have_posts()) : the_post(); 
+		
+	endwhile;
+    
 }
 
 ?>
