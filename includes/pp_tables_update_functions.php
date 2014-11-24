@@ -151,7 +151,8 @@ function pp_tables_check_table(){
 			  PRIMARY KEY (PostID))ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-		print_r(dbDelta( $sql ));    
+		print_r(dbDelta( $sql ));
+		delete_option("pp_table_update_date");
 	} else {
 			return "<b>$table_name already exists</b>";
 	}
@@ -205,6 +206,7 @@ function pp_tables_update_data($debug = false ) {
 		$count++;
 	endwhile;
     
+	//Store Last update into WP-Options with the given format
 	update_option("pp_table_update_date", date("Y-m-d H:i:s"));
 	return $count;
 }
