@@ -205,7 +205,7 @@ function pp_tables_update_data($debug = false ) {
 		$count++;
 	endwhile;
     
-	update_option("pp_table_update_date", date("Y-m-d H:i:s"));
+	update_option("pp_table_update_date", date("H:i d daysuf m Y"));
 	return $count;
 }
 
