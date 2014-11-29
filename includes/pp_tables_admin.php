@@ -20,11 +20,11 @@ function pp_tables_menu() {
 	
 	if ($_POST['action'] == 'update_data') {
 		$posts = pp_tables_update_data();
-		echo "<p>$posts entry's Updated</p>";
+		echo "<p>$posts entries Updated</p>";
 	}	
 	if ($_POST['action'] == 'update_data_debug') {
 		$posts = pp_tables_update_data(true);
-		echo "<p>$posts entry's Updated</p>";
+		echo "<p>$posts entries Updated</p>";
 	}
 	if ($_POST['action'] == 'check_table') {
 		pp_tables_check_table();

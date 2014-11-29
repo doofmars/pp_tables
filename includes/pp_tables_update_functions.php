@@ -207,7 +207,7 @@ function pp_tables_update_data($debug = false ) {
 	endwhile;
     
 	//Store Last update into WP-Options with the given format
-	update_option("pp_table_update_date", date("Y-m-d H:i:s"));
+	update_option("pp_table_update_date", date("g:ia l jS F Y"));
 	return $count;
 }
 
