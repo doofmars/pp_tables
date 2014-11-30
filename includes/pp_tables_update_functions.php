@@ -159,40 +159,19 @@ function pp_tables_check_table(){
 }
 
 
-/** Register main update function */
+/* Register main update function */
 function pp_tables_update_data($debug = false ) {
     global $wpdb;
-	$table_name = $wpdb->prefix . 'consolidation';
 
-	//Cat: All Games
-    $catID = 81;
 	//Create query
-    $query = 'cat='.$catID.'&showposts=1000&nopaging=true';
-	
-	$welcome_text = "none";
+    $query = 'cat=81&showposts=1000&nopaging=true';
 	$count = 1;
 	
 	query_posts($query);
 	while (have_posts()) : the_post(); 				
-		$post_row = array( 
-				'PostID' => get_the_ID(), 
-				'Name' => get_the_title(), 
-				'URL' =>  get_relative_permalink(get_permalink()), 
-				'Posted' => get_the_date("Y-m-d"), 
-				'Released' => formatPPDate(get_post_meta(get_the_ID(), "ReleaseDate", true)), 
-                'Downloads' => ppd_totalDownloadsTable(), 
-				'Recs' => getPPRatingCount(get_the_ID()), 
-				'AvRec' => getPPAverageRating(get_the_ID()), 
-				'PhillipSays' => getPPPhilipsRating(get_the_ID()), 
-				'Comments' => get_comments_number(), 
-				'FileSizeT' => get_post_meta(get_the_ID(), "filesize", true), 
-				'Playtime' => getPPPlaytime(), 
-				'Game' => getPPGame(), 
-				'Type' => getPPType(), 
-				'Tags' => getPPTags(), 
-			); 
-		$wpdb->replace($table_name, $post_row);
-		
+
+		pp_tables_update_row($wpdb);
+
 		if($debug){
 			echo "<p>";
 			print_r($post_row);
@@ -212,5 +191,45 @@ function pp_tables_update_data($debug = false ) {
 	update_option("pp_table_update_date", date("g:ia l jS F Y"));
 	return $count;
 }
+
+/*
+	Function to hook to the save_post Wordpress hook
+*/
+function pp_table_update_post(){
+	//We dont want to update if we dont have the update_after_post set to true or the post is not in category 81
+	if (esc_attr( get_option('update_after_post')) != "true" || !in_category(81)) {
+		return;
+	}
+	global $wpdb;
+	pp_tables_update_row($wpdb);	
+	}
+
+/*
+	Function to update a single row in the consolidation table
+*/
+function pp_tables_update_row($wpdb){
+	$table_name = $wpdb->prefix . 'consolidation';	
+	$post_row = array( 
+		'PostID' => get_the_ID(), 
+		'Name' => get_the_title(), 
+		'URL' =>  get_relative_permalink(get_permalink()), 
+		'Posted' => get_the_date("Y-m-d"), 
+		'Released' => formatPPDate(get_post_meta(get_the_ID(), "ReleaseDate", true)), 
+        'Downloads' => ppd_totalDownloadsTable(), 
+		'Recs' => getPPRatingCount(get_the_ID()), 
+		'AvRec' => getPPAverageRating(get_the_ID()), 
+		'PhillipSays' => getPPPhilipsRating(get_the_ID()), 
+		'Comments' => get_comments_number(), 
+		'FileSizeT' => get_post_meta(get_the_ID(), "filesize", true), 
+		'Playtime' => getPPPlaytime(), 
+		'Game' => getPPGame(), 
+		'Type' => getPPType(), 
+		'Tags' => getPPTags(), 
+	); 
+	$wpdb->replace($table_name, $post_row);
+}
+
+//Wordpress hooks
+add_action( 'save_post', 'pp_table_update_post' );
 
 ?>
