@@ -204,6 +204,8 @@ function pp_tables_update_data($debug = false ) {
 			}		
 		}
 		$count++;
+		ob_flush();
+        flush();
 	endwhile;
     
 	//Store Last update into WP-Options with the given format
