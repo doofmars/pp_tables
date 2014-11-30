@@ -174,7 +174,7 @@ function pp_tables_update_data($debug = false ) {
 	
 	query_posts($query);
 	while (have_posts()) : the_post(); 				
-		$test = array( 
+		$post_row = array( 
 				'PostID' => get_the_ID(), 
 				'Name' => get_the_title(), 
 				'URL' =>  get_relative_permalink(get_permalink()), 
@@ -191,11 +191,11 @@ function pp_tables_update_data($debug = false ) {
 				'Type' => getPPType(), 
 				'Tags' => getPPTags(), 
 			); 
-		$wpdb->replace($table_name, $test);
+		$wpdb->replace($table_name, $post_row);
 		
 		if($debug){
 			echo "<p>";
-			print_r($test);
+			print_r($post_row);
 			echo "</p>";
 		} else {
 			echo ".";
