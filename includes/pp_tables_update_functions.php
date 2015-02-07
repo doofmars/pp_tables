@@ -101,7 +101,7 @@ function getPPType() {
 		return 'Map';
 	}
 	if (in_category('hl2-ep2-mods')) {
-		return ' Mod';
+		return 'Mod';
 	}
 	if (in_category('of-mods')) {
 		return 'Mod';
@@ -109,7 +109,7 @@ function getPPType() {
 	if (in_category('of-maps')) {
 		return 'Map';
 	} else {
-		return 'Unknown';
+		return 'NC';
 	}
 }
 
