@@ -48,7 +48,7 @@ function getPPPlaytime(){
 	else if (has_tag('long')) {
 		return 'Long';
 	}
-	else if (has_tag('very-long')) {
+	else if (has_tag('very-long') || has_tag('extra-long')) {
 		return 'Extra Long';
 	}
 	else if (has_tag('never-ending')) {
