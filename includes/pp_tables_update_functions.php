@@ -170,13 +170,9 @@ function pp_tables_update_data($debug = false ) {
 	query_posts($query);
 	while (have_posts()) : the_post(); 				
 
-		pp_tables_update_row($wpdb);
+		pp_tables_update_row($wpdb, $debug);
 
-		if($debug){
-			echo "<p>";
-			print_r($post_row);
-			echo "</p>";
-		} else {
+		if(!$debug){
 			echo ".";
 			if ($count % 250 == 0){
 				echo "<br>\n";
@@ -207,7 +203,7 @@ function pp_table_update_post(){
 /*
 	Function to update a single row in the consolidation table
 */
-function pp_tables_update_row($wpdb){
+function pp_tables_update_row($wpdb, $debug){
 	$table_name = $wpdb->prefix . 'consolidation';	
 	$post_row = array( 
 		'PostID' => get_the_ID(), 
@@ -226,6 +222,11 @@ function pp_tables_update_row($wpdb){
 		'Type' => getPPType(), 
 		'Tags' => getPPTags(), 
 	); 
+	if($debug){
+		echo "<p>";
+		print_r($post_row);
+		echo "</p>";
+	}
 	$wpdb->replace($table_name, $post_row);
 }
 
