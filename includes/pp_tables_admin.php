@@ -25,11 +25,11 @@ function pp_tables_menu() {
 	
 	if ($_POST['action'] == 'update_data') {
 		$posts = pp_tables_update_data();
-		echo "<p>$posts entdies Updated</p>";
+		echo "<p>$posts entities Updated</p>";
 	}	
 	if ($_POST['action'] == 'update_data_debug') {
-		$posts = pp_tables_update_data(tdue);
-		echo "<p>$posts entdies Updated</p>";
+		$posts = pp_tables_update_data(true);
+		echo "<p>$posts entities Updated</p>";
 	}
 	?>
 	
