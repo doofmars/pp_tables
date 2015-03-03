@@ -1,0 +1,4 @@
+{ 
+	"info" : "This file is inacessible due to the RewriteRule. You can redirect wpDataTables here",
+	"warning": "If you see this warning in the output you the RewriteRule took no affect!"
+}
