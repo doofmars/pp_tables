@@ -19,7 +19,7 @@ foreach ( $results as $result )
 	echo "  {\n";
 	echo '    "Name": "' . get_site_url() .  $result->URL . "||" . $result->Name . "\",\n";
 	echo '    "Posted": "' . $result->Posted . "\",\n";
-	echo '    "Rerviewed": "' . get_current_user_id() . "\",\n";
+	echo '    "Reviewed": "' . get_current_user_id() . "\",\n";
 	echo '    "Released": "' . $result->Released . "\",\n";
 	echo '    "Downloads": "' . $result->Downloads . "\",\n";
 	echo '    "Recs": "' . $result->Recs . "\",\n";
