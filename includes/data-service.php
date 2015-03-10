@@ -34,4 +34,4 @@ foreach ( $results as $result )
 }
 echo "\n]";
 
-?>*
+?>
