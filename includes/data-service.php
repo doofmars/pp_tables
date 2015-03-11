@@ -1,6 +1,25 @@
 <?php
 require_once( '../../../../wp-load.php' );
 global $wpdb;
+
+function getReviewed($id) {
+	global $wpdb;
+	$user = wp_get_current_user();
+   //Check if user has reviewed this 
+	if( is_user_logged_in() ){
+		$table_name = $wpdb->prefix . 'pp_ratings';
+		$getReviews = $wpdb->get_row($wpdb->prepare("SELECT comment_id from $table_name WHERE post_id = %d AND user_id = %d AND next_rating = 0", $id, $user->ID));
+		if($wpdb->num_rows > 0){
+			return '<span class="hint--top hint--rounded hint--bounce hint--gstar5hint" data-hint="Yes, you have reviewed this release"><span class="greenish">R:Yes <i class="fa fa-check"></i></span></span>';
+		} else { 
+			return '<span class="hint--top hint--rounded hint--bounce hint--gstar1hint" data-hint="No, you have not reviewed this release"><span class="reddish">R:No <i class="fa fa-times"></i></span></span>';
+		}
+	} else {
+		return '<span class="hint--top hint--rounded hint--bounce hint--greyhint" data-hint="Login to see if you have reviewed this release"><span class="small">Login</span></span>';
+	}
+	
+}
+
 $table_name = $wpdb->prefix . 'consolidation';
 $results = $wpdb->get_results("SELECT * FROM $table_name ");
 header('Content-Type: application/json');
@@ -11,14 +30,14 @@ echo "{ \"data\" : [\n";
 foreach ( $results as $result ) 
 {	
 	if ($result->Posted != "0000-00-00") {
-	if ($first) {
-		$first = false;
-	} else {
-		echo ",\n";
-	}
+		if ($first) {
+			$first = false;
+		} else {
+			echo ",\n";
+		}
 		echo "  [\n";
 		echo "    \"<a href='" . get_site_url() .  $result->URL . "'>" . $result->Name . "</a>\",\n";
-		echo '    "' . get_current_user_id() . "\",\n";
+		echo '    ' . json_encode(getReviewed($result->PostID)) . ",\n";
 		echo '    "' . $result->Posted . "\",\n";
 		echo '    "' . $result->Released . "\",\n";
 		echo '    "' . $result->Downloads . "\",\n";
