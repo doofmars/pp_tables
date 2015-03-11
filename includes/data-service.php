@@ -7,31 +7,31 @@ header('Content-Type: application/json');
 
 $first = true;
 
-echo "[\n";
+echo "{ \"data\" : [\n";
 foreach ( $results as $result ) 
 {	
+	if ($result->Posted != "0000-00-00") {
 	if ($first) {
 		$first = false;
 	} else {
 		echo ",\n";
 	}
-
-	echo "  {\n";
-	echo '    "Name": "' . get_site_url() .  $result->URL . "||" . $result->Name . "\",\n";
-	echo '    "Posted": "' . $result->Posted . "\",\n";
-	echo '    "Reviewed": "' . get_current_user_id() . "\",\n";
-	echo '    "Released": "' . $result->Released . "\",\n";
-	echo '    "Downloads": "' . $result->Downloads . "\",\n";
-	echo '    "Recs": "' . $result->Recs . "\",\n";
-	echo '    "AvRec": "' . $result->AvRec . "\",\n";
-	echo '    "PhillipSays": "' . $result->PhillipSays . "\",\n";
-	echo '    "Comments": "' . $result->Comments . "\",\n";
-	echo '    "FileSizeT": "' . $result->FileSizeT . "\",\n";
-	echo '    "Game": "' . $result->Game . "\",\n";
-	echo '    "Type": "' . $result->Type . "\",\n";
-	echo '    "Tags": "' . $result->Tags . "\"\n";
-	echo "  }";
+		echo "  [\n";
+		echo "    \"<a href='" . get_site_url() .  $result->URL . "'>" . $result->Name . "</a>\",\n";
+		echo '    "' . get_current_user_id() . "\",\n";
+		echo '    "' . $result->Posted . "\",\n";
+		echo '    "' . $result->Released . "\",\n";
+		echo '    "' . $result->Downloads . "\",\n";
+		echo '    "' . $result->Recs . "\",\n";
+		echo '    ' . json_encode(getRatingColorTable($result->AvRec) . "<span class=\"" . getRatingColor($result->AvRec) . "\">AR" . $result->AvRec . "</span></span>") . ",\n";
+		echo '    ' . json_encode(getPhillipSaysTable($result->PhillipSays)) . ",\n";
+		echo '    "' . $result->FileSizeT . "\",\n";
+		echo '    "' . $result->Comments . "\",\n";
+		echo '    "' . $result->Game . "\",\n";
+		echo '    "' . $result->Type . "\",\n";
+		echo '    "' . $result->Tags . "\"\n";
+		echo "  ]";
+	}
 }
-echo "\n]";
-
+echo "\n]}";
 ?>
