@@ -17,11 +17,14 @@ function getReviewed($id) {
 	} else {
 		return '<span class="hint--top hint--rounded hint--bounce hint--greyhint" data-hint="Login to see if you have reviewed this release"><span class="small">Login</span></span>';
 	}
-	
 }
 
 $table_name = $wpdb->prefix . 'consolidation';
-$results = $wpdb->get_results("SELECT * FROM $table_name ");
+if (isset($_GET['game'])) {
+	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s", $_GET['game']));
+} else {
+	$results = $wpdb->get_results("SELECT * FROM $table_name ");
+}
 header('Content-Type: application/json');
 
 $first = true;
@@ -37,7 +40,9 @@ foreach ( $results as $result )
 		}
 		echo "  [\n";
 		echo "    \"<a href='" . get_site_url() .  $result->URL . "'>" . $result->Name . "</a>\",\n";
-		echo '    ' . json_encode(getReviewed($result->PostID)) . ",\n";
+		if (isset($_GET['getReviewed'])) {
+			echo '    ' . json_encode(getReviewed($result->PostID)) . ",\n";
+		}
 		echo '    "' . $result->Posted . "\",\n";
 		echo '    "' . $result->Released . "\",\n";
 		echo '    "' . $result->Downloads . "\",\n";
