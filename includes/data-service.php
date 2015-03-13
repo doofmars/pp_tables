@@ -39,18 +39,18 @@ foreach ( $results as $result )
 			echo ",\n";
 		}
 		echo "  [\n";
-		echo "    \"<a href='" . get_site_url() .  $result->URL . "'>" . $result->Name . "</a>\",\n";
+		echo '    ' . json_encode('<a href="' . get_site_url() .  $result->URL . '">' . $result->Name . '</a>'). ",\n";
 		if (isset($_GET['getReviewed'])) {
 			echo '    ' . json_encode(getReviewed($result->PostID)) . ",\n";
 		}
-		echo '    "' . $result->Posted . "\",\n";
-		echo '    "' . $result->Released . "\",\n";
-		echo '    "' . $result->Downloads . "\",\n";
-		echo '    "' . $result->Recs . "\",\n";
+		echo '    "' . date_format(date_create($result->Posted),"d M Y") . "\",\n";
+		echo '    "' . date_format(date_create($result->Released),"d M Y") . "\",\n";
+		echo '    ' . $result->Downloads . ",\n";
+		echo '    ' . $result->Recs . ",\n";
 		echo '    ' . json_encode(getRatingColorTable($result->AvRec) . "<span class=\"" . getRatingColor($result->AvRec) . "\">AR" . $result->AvRec . "</span></span>") . ",\n";
 		echo '    ' . json_encode(getPhillipSaysTable($result->PhillipSays)) . ",\n";
-		echo '    "' . $result->FileSizeT . "\",\n";
-		echo '    "' . $result->Comments . "\",\n";
+		echo '    ' . $result->FileSizeT . ",\n";
+		echo '    ' . json_encode(getPlaytimeTable($result->Playtime)) . ",\n";
 		echo '    "' . $result->Game . "\",\n";
 		echo '    "' . $result->Type . "\",\n";
 		echo '    "' . $result->Tags . "\"\n";
