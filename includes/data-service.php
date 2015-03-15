@@ -55,7 +55,7 @@ foreach ( $results as $result )
 			echo '    "' . $result->Game . "\",\n";
 		}
 		echo '    "' . $result->Type . "\",\n";
-		echo '    "' . $result->Tags . "\"\n";
+        echo '    "<span class=\"ssmall\">' . $result->Tags . "</span>\"\n";
 		echo "  ]";
 	}
 }
