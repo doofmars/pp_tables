@@ -51,7 +51,9 @@ foreach ( $results as $result )
 		echo '    ' . json_encode(getPhillipSaysTable($result->PhillipSays)) . ",\n";
 		echo '    ' . $result->FileSizeT . ",\n";
 		echo '    ' . json_encode(getPlaytimeTable($result->Playtime)) . ",\n";
-		echo '    "' . $result->Game . "\",\n";
+		if (!isset($_GET['game'])) {
+			echo '    "' . $result->Game . "\",\n";
+		}
 		echo '    "' . $result->Type . "\",\n";
 		echo '    "' . $result->Tags . "\"\n";
 		echo "  ]";
