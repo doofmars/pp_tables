@@ -20,8 +20,12 @@ function getReviewed($id) {
 }
 
 $table_name = $wpdb->prefix . 'consolidation';
-if (isset($_GET['game'])) {
+if (isset($_GET['game']) && isset($_GET['tag'])) {
+	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s AND Tags LIKE %s", $_GET['game'], '%' . $_GET['tag'] . '%'));
+} else if (isset($_GET['game'])) {
 	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s", $_GET['game']));
+} else if (isset($_GET['tag'])) {
+	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Tags LIKE %s", '%' . $_GET['tag'] . '%'));
 } else {
 	$results = $wpdb->get_results("SELECT * FROM $table_name ");
 }
