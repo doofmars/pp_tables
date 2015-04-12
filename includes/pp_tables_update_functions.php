@@ -205,6 +205,11 @@ function pp_table_update_post(){
 */
 function pp_tables_update_row($wpdb, $debug){
 	$table_name = $wpdb->prefix . 'consolidation';	
+	if($debug){
+		echo "<p>";
+		echo "Adding post " . get_the_ID();
+		echo "</p>";
+	}
 	$post_row = array( 
 		'PostID' => get_the_ID(), 
 		'Name' => get_the_title(), 
