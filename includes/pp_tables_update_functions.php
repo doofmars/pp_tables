@@ -71,6 +71,9 @@ function getPPGame() {
 	if (in_category('hl2-ep2')) {
 		return 'HL2:Ep2';
 	}
+	if (in_category('Black-Mesa')) {
+		return 'BM';
+	}
 	if (in_category('opposing-force')) {
 		return 'OF';
 	} else {
@@ -83,6 +86,12 @@ function getPPType() {
 		return 'Map';
 	}
 	if (in_category('hl-mods')) {
+		return 'Mod';
+	}
+	if (in_category('bm-maps')) {
+		return 'Map';
+	}
+	if (in_category('bm-mods')) {
 		return 'Mod';
 	}
 	if (in_category('hl2-maps')) {
