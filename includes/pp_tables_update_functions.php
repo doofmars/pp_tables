@@ -71,7 +71,7 @@ function getPPGame() {
 	if (in_category('hl2-ep2')) {
 		return 'HL2:Ep2';
 	}
-	if (in_category('Black-Mesa')) {
+	if (in_category('black-mesa')) {
 		return 'BM';
 	}
 	if (in_category('opposing-force')) {
