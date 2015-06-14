@@ -13,7 +13,9 @@ $resultA = "";
 $resultB = "";
 $resultC = "";
 
-header('Content-Type: text/plain');
+//Enable to get plaintext
+//header('Content-Type: text/plain'); 
+
 
 foreach ( $results as $result ) {
 	$posStart = stripos($result->post_content, $start);
