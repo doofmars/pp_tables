@@ -145,6 +145,7 @@ function pp_tables_check_table(){
 			  PostID int(11) NOT NULL,
 			  Name text COLLATE utf8_unicode_ci NOT NULL,
 			  URL text COLLATE utf8_unicode_ci NOT NULL,
+			  Author text COLLATE utf8_unicode_ci NOT NULL,
 			  Posted date NOT NULL,
 			  Released date NOT NULL,
 			  Downloads int(11) NOT NULL,
@@ -157,13 +158,14 @@ function pp_tables_check_table(){
 			  Game text COLLATE utf8_unicode_ci NOT NULL,
 			  Type text COLLATE utf8_unicode_ci NOT NULL,
 			  Tags text COLLATE utf8_unicode_ci NOT NULL,
+			  Status text COLLATE utf8_unicode_ci NOT NULL,
 			  PRIMARY KEY (PostID))ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		print_r(dbDelta( $sql ));
 		delete_option("pp_table_update_date");
 	} else {
-			return "<b>$table_name already exists</b>";
+		return "<b>$table_name already exists</b>";
 	}
 }
 
@@ -223,6 +225,7 @@ function pp_tables_update_row($wpdb, $debug){
 		'PostID' => get_the_ID(), 
 		'Name' => get_the_title(), 
 		'URL' =>  get_relative_permalink(get_permalink()), 
+		'Author' => get_post_meta(get_the_ID(), "Author", true), 
 		'Posted' => get_the_date("Y-m-d"), 
 		'Released' => formatPPDate(get_post_meta(get_the_ID(), "ReleaseDate", true)), 
         'Downloads' => ppd_totalDownloadsTable(), 
@@ -235,6 +238,7 @@ function pp_tables_update_row($wpdb, $debug){
 		'Game' => getPPGame(), 
 		'Type' => getPPType(), 
 		'Tags' => getPPTags(), 
+		'Status' =>  get_post_status(), 
 	); 
 	if($debug){
 		echo "<p>";

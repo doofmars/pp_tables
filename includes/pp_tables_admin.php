@@ -31,6 +31,10 @@ function pp_tables_menu() {
 		$posts = pp_tables_update_data(true);
 		echo "<p>$posts entities Updated</p>";
 	}
+	if ($_POST['action'] == 'check_table') {
+		$posts = pp_tables_check_table();
+		echo "<p>$posts</p>";
+	}
 	?>
 	
 	<table>

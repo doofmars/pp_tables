@@ -20,17 +20,17 @@ function getReviewed($id) {
 }
 
 $table_name = $wpdb->prefix . 'consolidation';
+$status = "'publish'";
 if (isset($_GET['game']) && isset($_GET['tag'])) {
-	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s AND Tags LIKE %s", $_GET['game'], '%' . $_GET['tag'] . '%'));
+	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s AND Tags LIKE %s AND Status = $status", $_GET['game'], '%' . $_GET['tag'] . '%'));
 } else if (isset($_GET['game'])) {
-	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s", $_GET['game']));
+	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Game = %s AND Status = $status", $_GET['game']));
 } else if (isset($_GET['tag'])) {
-	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Tags LIKE %s", '%' . $_GET['tag'] . '%'));
+	$results = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE Tags LIKE %s AND Status = $status", '%' . $_GET['tag'] . '%'));
 } else {
-	$results = $wpdb->get_results("SELECT * FROM $table_name ");
+	$results = $wpdb->get_results("SELECT * FROM $table_name WHERE Status = $status");
 }
 header('Content-Type: application/json');
-
 $first = true;
 
 echo "{ \"data\" : [\n";
@@ -49,6 +49,7 @@ foreach ( $results as $result )
 		}
 		echo '    "' . date_format(date_create($result->Posted),"d M Y") . "\",\n";
 		echo '    "' . date_format(date_create($result->Released),"d M Y") . "\",\n";
+		echo '    "' . $result->Author . "\",\n";
 		echo '    ' . $result->Downloads . ",\n";
 		echo '    ' . $result->Recs . ",\n";
 		echo '    ' . json_encode(getRatingColorTable($result->AvRec) . "<span class=\"" . getRatingColor($result->AvRec) . "\">AR" . $result->AvRec . "</span></span>") . ",\n";
