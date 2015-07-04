@@ -2,8 +2,8 @@
 require_once( '../../../../wp-load.php' );
 global $wpdb;
 
-$inputtable = "wp_yjygb8jj_posts";
-$outputtable = "wp_yjygb8jj_postmeta";
+$inputtable = "wp_YJYgB8jJ_posts";
+$outputtable = "wp_YJYgB8jJ_postmeta";
 $start ="<li><strong>Author: </strong>";
 $end ="</li>";
 
