@@ -147,7 +147,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '896', 'Author', 'Andrew Gunns');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '901', 'Author', 'Peter Lok');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '904', 'Author', 'Barry A Bollinger');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '907', 'Author', 'Benoit Champagne a.k.a DaMnation');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '907', 'Author', 'Benoit Champagne AKA DaMnation');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '911', 'Author', 'Peter Lok');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '912', 'Author', 'Peter Lok');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '913', 'Author', 'Unknown');
@@ -204,7 +204,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1067', 'Author', 'Brendan MacLean');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1075', 'Author', 'Unknown');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1076', 'Author', 'Fred Sargent');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1079', 'Author', 'Tim "Kew" Jervis');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1079', 'Author', 'Tim Jervis AKA Kew');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1080', 'Author', 'Tim Jervis');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1088', 'Author', 'AJ');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1098', 'Author', 'Leon Stephan Brinkman');
@@ -263,8 +263,8 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1352', 'Author', 'Tyler Munden');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1360', 'Author', 'Barry Bollinger');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1361', 'Author', 'Barry Bollinger');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1362', 'Author', 'Barry A Bollinger');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1366', 'Author', 'Barry A. Bollinger');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1362', 'Author', 'Barry Bollinger');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1366', 'Author', 'Barry Bollinger');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1383', 'Author', 'Legion');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1385', 'Author', 'Tyler Munden');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2901', 'Author', 'Cory Hasselbach, Kyle Mohammed, Tara Mustapha and Anat Rabkin');
@@ -308,7 +308,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1613', 'Author', 'Fred Conception');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1619', 'Author', 'CyberMan');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1622', 'Author', 'DocRock and the Grand Unification Boys');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1626', 'Author', 'Francois "Venomus" Barnes');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1626', 'Author', 'Francois Barnes AKA Venomus');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1642', 'Author', 'Nathan Ruck');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1643', 'Author', 'Martin Schultz');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1656', 'Author', 'synntaxus');
@@ -380,7 +380,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1872', 'Author', 'Francois Barnes AKA Venomus');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1881', 'Author', 'alexb911');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1877', 'Author', 'T-Dogg');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1878', 'Author', 'Mikael "Qwerty83" Hasslund');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1878', 'Author', 'Mikael Hasslund AKA Qwerty83');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1879', 'Author', 'Deadly Contagion');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1880', 'Author', 'romeojguy');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1903', 'Author', 'Unknown');
@@ -425,7 +425,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2029', 'Author', 'macik');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '1992', 'Author', 'MattInABubble');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2005', 'Author', 'W. Broisch');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2413', 'Author', 'Glenn "RipeX" Evertsen');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2413', 'Author', 'Glenn Evertsen AKA RipeX');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2758', 'Author', 'Drew Mobley');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2016', 'Author', 'Koslov Dmitry (Demalition)');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2017', 'Author', 'Jan Ripper AKA fresco');
@@ -567,7 +567,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2659', 'Author', 'Unknown');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2663', 'Author', 'Alexb911');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2664', 'Author', 'Alexb911');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2672', 'Author', 'Anthony "Bean" Nichols');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2672', 'Author', 'Anthony Nichols AKA Bean');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2741', 'Author', 'Koumei satou');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2929', 'Author', 'MuzzleFlash');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2930', 'Author', 'IMUS');
@@ -586,7 +586,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2987', 'Author', 'Steve Galloway AKA moose o death');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2989', 'Author', 'Heavily Armed Team');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2994', 'Author', 'Mister Dan');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2999', 'Author', 'Nick "Daedlehack" Williams');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '2999', 'Author', 'Nick Williams AKA Daedlehack');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '3000', 'Author', 'Zimmbous');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '3008', 'Author', 'Smanu85');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '3017', 'Author', '?xelents');
@@ -851,7 +851,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6107', 'Author', 'I.M.U.S');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6189', 'Author', 'IMUS Production');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6212', 'Author', 'Unknown');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6226', 'Author', 'Vincevich "Gua" Andrey ');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6226', 'Author', 'Vincevich Andrey AKA Gua ');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6231', 'Author', 'gi777');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6245', 'Author', 'cssghost');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '6263', 'Author', 'FenixGman');
@@ -989,7 +989,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7943', 'Author', 'Richard Milner');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7945', 'Author', 'Rebecca Richards');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7947', 'Author', 'Kennth Dilks');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7950', 'Author', 'Chris "Playbus" Fox and Jose "Kasperg" Ameyugo');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7950', 'Author', 'Chris Fox AKA Playbus and Jose Ameyugo AKA Kasperg');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7953', 'Author', 'BSSaar');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7954', 'Author', 'Chris McCrimmons');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '7955', 'Author', 'Jason Gimba');
@@ -1185,7 +1185,7 @@ INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10792', 'Author', 'Tibor Horváth');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10753', 'Author', 'Various');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10754', 'Author', 'Nick Boeckman, Joseph Williams, The_Blazer, Joseph Williams& Jim Partridge');
-INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10757', 'Author', 'Chris "Playbus" Fox and Jose "Kasperg" Ameyugo');
+INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10757', 'Author', 'Chris Fox AKA Playbus and Jose Ameyugo AKA Kasperg');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10772', 'Author', 'Mike DiRenzo');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10774', 'Author', 'Chuck Wilson');
 INSERT INTO wp_YJYgB8jJ_postmeta (`meta_id` ,`post_id` ,`meta_key` ,`meta_value`) VALUES (NULL , '10776', 'Author', 'Setin');
