@@ -17,7 +17,12 @@ function getPPRatingCount($postID){
 
 function getPPPhilipsRating($postID){
 	global $wpdb;
-	return $wpdb->get_var($wpdb->prepare("SELECT rating FROM wp_YJYgB8jJ_pp_ratings WHERE post_id = %d and user_id = 1", $postID));
+	$says = $wpdb->get_var($wpdb->prepare("SELECT rating FROM wp_YJYgB8jJ_pp_ratings WHERE post_id = %d and user_id = 1", $postID));
+	if (is_numeric($says)) {
+		return $says;
+	} else {
+		return 0;
+	}
 }
 
 //Get the average rating
@@ -203,12 +208,12 @@ function pp_tables_update_data($debug = false ) {
 	Function to hook to the save_post Wordpress hook
 */
 function pp_table_update_post(){
-	//We dont want to update if we dont have the update_after_post set to true or the post is not in category 81
+	//We dont want to update if we dont have the update_after_post set to true or the post is not in category 81 (Play)
 	if (esc_attr( get_option('update_after_post')) != "true" || !in_category(81)) {
 		return;
 	}
 	global $wpdb;
-	pp_tables_update_row($wpdb);	
+	pp_tables_update_row($wpdb, false);	
 	}
 
 /*
